@@ -41,8 +41,7 @@ docker build --rm --no-cache --file docker/visualize-osmesa/Dockerfile -t kitwar
 #----------------------------------------------------------------------------
 
 echo -e "\n\n\nBuilding kitware/hpccloud:visualize-egl \n\n\n"
-# docker build --rm --no-cache --file docker/visualize-egl/Dockerfile --build-arg PARAVIEW_TAG=v5.6.1 --build-arg SUPERBUILD_TAG=v5.6.1 -t kitware/hpccloud:visualize-egl .
-docker build --rm --no-cache --file docker/visualize-egl/Dockerfile -t kitware/hpccloud:visualize-egl .
+docker build --rm --no-cache --file docker/visualize-egl/Dockerfile --build-arg PARAVIEW_TAG=release --build-arg SUPERBUILD_TAG=release -t kitware/hpccloud:visualize-egl .
 
 #----------------------------------------------------------------------------
 #                                compute-pyfr
